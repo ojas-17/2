@@ -5,29 +5,30 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js">
         </script>
         <script> 
-        var app=angular.module("myApp",[]);             
-        app.controller("myCntrl",function($scope)
-        {
-               $scope.username=''
-               $scope.password=''  
-               $scope.noattempts=0
-               $scope.login=function()
-               {
-                if($scope.username=="thanuja" && $scope.password=="12345678")
+            var app=angular.module("myApp",[]);             
+            app.controller("myCntrl",function($scope)
+            {
+                $scope.username=''
+                $scope.password=''  
+                $scope.noattempts=0
+                $scope.login=function()
                 {
-                    alert("Login Successful")
-                }
-                else{
-                    $scope.noattempts++
-                    if($scope.noattempts<=3)
+                    if($scope.username=="thanuja" && $scope.password=="12345678")
                     {
-                        alert("Incorrect username/password! Attempt No. "+$scope.noattempts)
+                        alert("Login Successful")
                     }
                     else
                     {
-                        document.getElementById("loginbutton").disabled=true
+                        $scope.noattempts++
+                        if($scope.noattempts<=3)
+                        {
+                            alert("Incorrect username/password! Attempt No. "+$scope.noattempts)
+                        }
+                        else
+                        {
+                            document.getElementById("loginbutton").disabled=true
+                        }
                     }
-                }
                 }
             });        
         </script>
