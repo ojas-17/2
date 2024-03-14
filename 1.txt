@@ -16,7 +16,7 @@
         <h2>Angular JS Application to display Full Name</h2> 
         <div ng-controller="myCntrl"> 
             Enter First Name: <input type="text" ng-model="firstname" /><br /> 
-            Enter Last Namr: <input type="text" ng-model="lastname" /><br /> 
+            Enter Last Name: <input type="text" ng-model="lastname" /><br /> 
             Your Full Name: {{firstname +" "+ lastname}} 
         </div> 
     </body> 
